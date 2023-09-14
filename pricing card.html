@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>pricing card</title>
+    <style>
+* {
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+}
+body h2{
+    font-family: 'Kanit', sans-serif;
+font-family: 'Poppins', sans-serif;
+margin: 10px;
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+  margin-top: 5%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 24px;
+}
+.columns:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 24px;
+  background-image: url('https://img.freepik.com/free-photo/plain-smooth-green-wall-texture_53876-129746.jpg?w=900&t=st=1694695043~exp=1694695643~hmac=9a6cbec65b6e33a21687458bb34d1d9387a5c11599e46145cdd41593071bca0f');
+  
+}
+
+.price:hover {
+  box-shadow: 18px 18px 18px 18px rgba(0,0,0,0.2)
+}
+
+.price .header {
+  
+  color: white;
+  font-size: 25px;
+  border-radius: 24px 24px 0 0;
+  font-family: 'Courgette', cursive;
+  font-family: 'Kanit', sans-serif;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.price li {
+  
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.price .grey {
+  
+  font-size: 20px;
+  border-radius: 0 0 24px 24px;
+ 
+}
+
+
+.button {
+  background-color: #f6f9f8;
+  font-weight: bold;
+  border: none;
+  color: rgb(12, 12, 12);
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 24px;
+  -webkit-transition: 0.3s;
+  transition: 0.6s;
+}
+.button:hover{
+    box-shadow: 0 12px 18px 0 rgba(6, 236, 133, 0.2)
+    
+
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Poppins:wght@300;400;500;600&display=swap');
+    </style>
+</head>
+<body>
+
+    
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Basic</li>
+    <li class="first">$ 24.99 / year</li>
+    <li>10GB Storage</li>
+    <li>3 Domains</li>
+    <li>10 Email address</li>
+    <li> ❎ live support</li>
+    <li class="grey"><a href="#" class="button">order now</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" >standard</li>
+    <li class="first">$ 49.99 / year</li>
+    <li>50GB Storage</li>
+    <li>5 Domains</li>
+    <li>unlimited Email address</li>
+    <li> ❎ live support</li>
+    <li class="grey"><a href="#" class="button">order now</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Premium</li>
+    <li class="first">$ 99.99 / year</li>
+    <li>unlimited Storage</li>
+    <li>30 Domains</li>
+    <li>unlimited Email address</li>
+    <li> ✅ live support</li>
+    <li class="grey"><a href="#" class="button">order now</a></li>
+  </ul>
+</div>
+
+    
+</body>
+</html>
