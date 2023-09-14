@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>animeted web</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+
+    }
+    body h2{
+        font-size: 50px;
+        font-weight: 500;
+        font-family: cursive;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .imgslide{
+        width: 60%;
+        height: 400px;
+        background-image: url('https://img.freepik.com/free-photo/beautiful-color-clownfish-coral-feefs_488145-1028.jpg?w=900&t=st=1694599255~exp=1694599855~hmac=666c88751a7a15975b2bbdc2b600241c3163bd88e30e7e244fcaf51c9bc31d99');
+        background-size: 100% 100%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        animation: changeimage 20s linear infinite;
+        margin-top: 5%;
+    }
+    .box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0px 20px;
+
+}
+.box1 .box2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.box1 .box2 .gallary{
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+.box1 .box2 .gallary img{
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+    .skills{
+       width: 100%;
+       max-width: 600px;
+      padding: 0 20px;
+      background-color: #282828;
+      border-radius: 3px;
+      margin-top: 5%;
+      margin-bottom: 5%;
+}
+
+.skill-name{
+  font-size: 18px;
+  font-weight: 700;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.skill-bar{
+  height: 14px;
+  background: #282828;
+  border-radius: 3px;
+}
+
+.skill-per{
+  height: 14px;
+  background: #d13639;
+  border-radius: 3px;
+  position: relative;
+  animation: fillBars 2.5s 1;
+}
+
+.skill-per::before{
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #f1f1f1;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f1f1f1;
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.wrapper{
+  width: 330px;
+  padding: 2rem 0 1rem 0;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+h1{
+  font-size: 2rem;
+  color: #07001f;
+}
+p{
+  margin-bottom: 1.7rem;
+}
+form input{
+  width: 85%;
+  outline: none;
+  border: none;
+  background: #dfe9f5;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.recover{	
+  text-align: right;
+  font-size: 0.8rem;
+  margin: 0.2rem 1.7rem 0 0;
+}
+.recover a{
+  text-decoration: none;
+  color: #07001f;
+}
+button{
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  padding: 8px 0;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 85%;
+  background: tomato;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover{
+  background: rgba(122, 30, 30, 0.767);
+}
+.or{
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+}
+.icons i{
+  color: #07001f;
+  padding: 00.8rem 1.5rem;
+  border-radius: 10px;
+  margin-left: .9rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 2px solid #dfe9f5;
+}
+.icons i:hover{
+  color: #fff !important;
+  background: #07001f;
+  transition: 1s;
+}
+.icons i:first-child{
+  color: green;
+}
+.icons i:last-child{
+  color: blue;
+}
+.not-member{
+  font-size: 0.8rem;
+  margin-top: 1.4rem;
+}
+.not-member a{
+  color: tomato;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+
+@keyframes fillBars{
+  from{
+    width: 0;
+  }
+  to{
+    width: 100%;
+  }
+}
+    
+    @keyframes changeimage {
+        0%{
+            background-image: url('https://img.freepik.com/free-photo/beautiful-color-clownfish-coral-feefs_488145-1028.jpg?w=900&t=st=1694599255~exp=1694599855~hmac=666c88751a7a15975b2bbdc2b600241c3163bd88e30e7e244fcaf51c9bc31d99');
+        }
+        25%{
+            background-image: url('https://img.freepik.com/free-photo/closeup-green-sea-turtle-swimming-underwater-lights_181624-25236.jpg?t=st=1694598361~exp=1694598961~hmac=7d417ce246d8c3fe626a602dd6a1fb6568d1a229ce03f95afa0af2a0b52e2859');
+        }
+        50%{
+            background-image: url('https://img.freepik.com/premium-photo/loving-couple-dives-among-corals-fishes-ocean_104263-1066.jpg?w=900');
+        }
+        75%{
+            background-image: url('https://img.freepik.com/free-photo/cute-anemone-fish-playing-coral-reef-beautiful-color-clownfish-coral-feefs_488145-1151.jpg?w=900&t=st=1694599241~exp=1694599841~hmac=46028d92feac8583833ad5d8d1b788f36e8c85e3b46acac7f78f52df1e152228');
+        }
+        100%{
+            background-image: url('https://img.freepik.com/free-photo/beautiful-color-clownfish-coral-feefs_488145-1028.jpg?w=900&t=st=1694599255~exp=1694599855~hmac=666c88751a7a15975b2bbdc2b600241c3163bd88e30e7e244fcaf51c9bc31d99');
+        }        
+    }
+    #preloader{
+        background: rgb(11, 11, 11) url('https://miro.medium.com/v2/resize:fit:1100/1*e_Loq49BI4WmN7o9ItTADg.gif') no-repeat center;
+        background-size: 15%;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        
+
+    }
+
+</style>    
+</head>
+<body>
+    <div id="preloader">
+
+
+    </div>
+    <h2>the great <span>ocean</span> life</h2>
+    <div class="imgslide">
+
+
+    </div>
+      <div class="box1">
+        <div class="box2">
+            <class class="gallary">
+                <img src="https://img.freepik.com/free-photo/colorful-clown-fish-swim-african-reef-generated-by-ai_188544-36607.jpg?w=1060&t=st=1694606509~exp=1694607109~hmac=8aab5968eb86e307885451b38fc59c946df284e4f09d10068cd2bc71d35b67fd" alt="">
+                <img src="https://img.freepik.com/free-photo/beautiful-lion-fish-hovering-mid-water-hunting-small-prey-blue-water_167946-104.jpg?t=st=1694606502~exp=1694607102~hmac=7adb2d4749dd642cc484fea02f5aeaf907c1bb43a4acc3b4e19883921d24e40a" alt="">
+                <img src="https://img.freepik.com/free-photo/multicolored-exotic-fish_1398-2636.jpg?w=900&t=st=1694606545~exp=1694607145~hmac=216cf922123ab1b53b2492c82e214fcfda9677a06cf56edb48a0c2bf81fffaa7" alt="">
+                <img src="https://img.freepik.com/free-photo/beautiful-color-mandarin-fish_488145-1168.jpg?w=900&t=st=1694606566~exp=1694607166~hmac=afc4323add691452d50506151886fde3d4d2ffa92fbbcaba649cd5e13cbb1991" alt="">
+            </class>
+            <class class="gallary">
+                <img src="https://img.freepik.com/free-photo/halfmoon-betta-fish_1150-7812.jpg?w=900&t=st=1694606586~exp=1694607186~hmac=3236817573644adffca38612c41f54616ca7b98649167a734c473c5ea1a67974" alt="">
+                <img src="https://img.freepik.com/free-photo/cute-anemone-fish-playing-coral-reef_488145-115.jpg?w=900&t=st=1694606609~exp=1694607209~hmac=7b06b0a0f0c226f50892f6d83a5458b535312a4353b9cca5516e5b93501fad85" alt="">
+                <img src="https://img.freepik.com/premium-photo/paracanthurus-hepatus-blue-tang-amphiprion-percula-red-sea-fish-home-coral-reef-aquarium_75145-234.jpg?w=900" alt="">
+                <img src="https://img.freepik.com/free-photo/closeup-shot-skate-fish-underwater-with-blurred-background_181624-12981.jpg?w=900&t=st=1694606665~exp=1694607265~hmac=b4540aafccb1f4a03504b55df3604f37d7c10e4203c495e0ef31478931922d25" alt="">
+            </class>
+            <class class="gallary">
+                <img src="https://img.freepik.com/premium-photo/two-bottlenose-dolphins-swimming-pool-underwater-shot_242170-222.jpg?w=900" alt="">
+                <img src="https://img.freepik.com/free-photo/exotic-blue-fish-wildlife_1360-233.jpg?w=900&t=st=1694606761~exp=1694607361~hmac=2a5b48c2020c707bc9e5c81aca327507e6415cee188d6cced0f4fa327e549015" alt="">
+                <img src="https://img.freepik.com/premium-photo/sea-turtle-swims-water-background-coral-reefs-maldives-indian-ocean-coral-reef_564276-3339.jpg?w=900" alt="">
+                <img src="https://img.freepik.com/premium-photo/seahorse-hippocampus-swimming_38678-155.jpg?w=826" alt="">
+            </class>
+
+        </div>
+      </div>
+      <div class="skills">
+        <div class="skill">
+          <div class="skill-name">blue whales extinct ratio</div>
+          <div class="skill-bar">
+            <div class="skill-per" per="90%" style="max-width:90%"></div>
+          </div>
+        </div>
+      
+        <div class="skill">
+          <div class="skill-name">sea turtel extinct ratio</div>
+          <div class="skill-bar">
+            <div class="skill-per" per="70%" style="max-width:70%"></div>
+          </div>
+        </div>
+      
+        <div class="skill">
+          <div class="skill-name">gold fish extinct ratio</div>
+          <div class="skill-bar">
+            <div class="skill-per" per="60%" style="max-width:60%"></div>
+          </div>
+        </div>
+        <div class="wrapper">
+            <h1>Hello Again!</h1>
+            <p>Welcome back you've <br> been missed!</p>
+            <form>
+              <input type="text" placeholder="Enter username">
+              <input type="password" placeholder="Password">
+              <p class="recover">
+                <a href="#">Recover Password</a>
+              </p>
+            <closeform></closeform></form>
+            <button>Sign in</button>
+            <p class="or">
+              ----- or continue with -----
+            </p>
+            <div class="icons">
+              <i class="fab fa-google"></i>
+              <i class="fab fa-github"></i>
+              <i class="fab fa-facebook"></i>
+            </div>
+            <div class="not-member">
+              Not a member? <a href="#">Register Now</a>
+            </div>
+          </div>
+    
+    
+       <script>
+         var loader = document.getElementById("preloader");
+        window.addEventListener("load",function(){
+            loader.style.display = "none";
+        })
+       </script>
+    
+</body>
+</html>
