@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"/>
+    <title>continent travel co.</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Kanit:wght@500&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&family=Titillium+Web&display=swap');
+:root {
+  --primary-color: #669ccb;
+  --primary-color-dark: #5681a7;
+  --secondary-color: #e8f1fa;
+  --text-dark: #282d31;
+  --text-light: #767268;
+  --extra-light: #f3f4f6;
+
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  padding: 5rem 1rem;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section__subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--primary-color);
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+body h1{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem 1rem;
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo a {
+  text-decoration: none;
+  color: var(--extra-light);
+  font-size: 1.5rem;
+  font-family: cursive;
+}
+
+.nav__links {
+  display: none;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  color: var(--extra-light);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: var(--primary-color);
+}
+
+header {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(45, 92, 132, 0.5),
+      rgba(45, 92, 132, 0.5)
+    ),
+    url("https://img.freepik.com/premium-photo/happy-young-couple-holding-each-other-laughing-with-enjoying-together-summer-beach_55877-339.jpg?w=900");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .section__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: var(--extra-light);
+}
+
+.header__content h1 {
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 5rem;
+}
+
+.header__content p {
+  text-align: center;
+}
+
+.header__content button {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--extra-light);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header__content button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.journey__container {
+  background-color: var(--secondary-color);
+}
+
+.journey__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.country__card {
+  background-color: var(--extra-light);
+}
+
+.country__name {
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.country__name i {
+  font-size: 1.2rem;
+}
+
+.country__name span {
+  font-style: italic;
+}
+
+.banner__container {
+  background-image: linear-gradient(
+      rgba(35, 71, 103, 0.5),
+      rgba(35, 71, 103, 0.5)
+    ),
+    url("https://img.freepik.com/free-photo/breathtaking-scenery-rocky-beach-beautiful-sunset_181624-35460.jpg?w=900&t=st=1694773151~exp=1694773751~hmac=f8ff82c36ccefcf6f56fe3613caa45bfc97e9b216ef0c164ab7f150723ad03d5");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner__container .section__container {
+  padding: 10rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.banner__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  color: var(--extra-light);
+}
+
+.banner__content h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.banner__content button {
+  padding: 0.5rem 2rem;
+  outline: none;
+  border: 2px solid var(--secondary-color);
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.display__container {
+  background-color: var(--secondary-color);
+}
+
+.display__container :is(.section__title, .section__subtitle) {
+  color: var(--text-dark);
+}
+
+.display__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.display__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--extra-light);
+  text-align: center;
+}
+
+.display__card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.display__card h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 1rem;
+  color: var(--text-dark);
+}
+
+.display__card p {
+  font-size: 0.8rem;
+  padding: 0 1rem;
+  color: var(--text-dark);
+}
+
+.display__grid .grid-1 {
+  grid-area: 1/1/3/3;
+}
+
+footer {
+  background-color: var(--text-dark);
+  color: var(--secondary-color);
+}
+
+footer .section__container {
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.social__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social__icons i {
+  padding: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+footer p {
+  font-style: italic;
+}
+
+@media (min-width: 640px) {
+  .nav__links {
+    display: flex;
+  }
+
+  header .section__container {
+    justify-content: flex-start;
+  }
+
+  .header__content {
+    max-width: 400px;
+    align-items: flex-start;
+  }
+
+  .header__content p {
+    text-align: left;
+  }
+
+  .journey__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .display__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .display__card {
+    gap: 0;
+  }
+
+  .display__card i {
+    font-size: 1.75rem;
+  }
+
+  .display__card h4 {
+    font-size: 1rem;
+  }
+
+  .display__card p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 786px) {
+  .banner__container .section__container {
+    justify-content: flex-end;
+  }
+
+  .banner__content {
+    align-items: flex-end;
+    text-align: right;
+    max-width: 800px;
+  }
+
+  .display__card {
+    gap: 0.5rem;
+  }
+
+  .display__card i {
+    font-size: 2.5rem;
+  }
+
+  .display__card p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .display__card {
+    gap: 1rem;
+  }
+
+  .display__card i {
+    font-size: 3rem;
+  }
+
+  .display__card h4 {
+    font-size: 1.5rem;
+  }
+
+  .display__card p {
+    font-size: 1rem;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo"><a href="#">continent co.</a></div>
+      <ul class="nav__links">
+        <li class="link">Home</li>
+        <li class="link">Blog</li>
+        <li class="link">Offers</li>
+        <li class="link">Services</li>
+        <li class="link">Contacts</li>
+      </ul>
+    </nav>
+    <header>
+      <div class="section__container">
+        <div class="header__content">
+          <h1>Travel</h1>
+          <p>
+            Embark on a journey of a lifetime and explore the world's most
+            breathtaking destinations with our expert travel advice. From exotic
+            beaches to cultural wonders, we've got you covered with our
+            comprehensive travel guides and insider tips.
+          </p>
+          <button>Read more</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="journey__container">
+      <div class="section__container">
+        <h2 class="section__title">Start Your Journey</h2>
+        <p class="section__subtitle">The most searched countries in March</p>
+        <div class="journey__grid">
+          <div class="country__card">
+            <img src="https://img.freepik.com/free-photo/traveller-explore-rugged-landscape-iceland_346278-237.jpg?w=900&t=st=1694771314~exp=1694771914~hmac=5edf81d0df7b82042b77802c2368de2ae1833696a77fac65b092895f403f1202" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>iceland</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="https://img.freepik.com/free-photo/young-couple-posing-beach-having-fun-sea-laughing-smiling_1296-916.jpg?w=900&t=st=1694771494~exp=1694772094~hmac=5b5799b0fd4256276fa178b81a46720d8e6bbcbe10acf15c3c037b31bb4025e3" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>maldives </span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="https://img.freepik.com/premium-photo/beautiful-young-man-woman-pose-brooklyn-bridge-rays-morning-sun_8353-2471.jpg?w=900" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>San Francisco</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="https://img.freepik.com/free-photo/couple-hikers-sit-waterfall-cliff_346278-85.jpg?w=900&t=st=1694772547~exp=1694773147~hmac=3c3e292015e0e9484d851f7acef6ff80619157eaeeb68e58840a56589b32aca9" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Goðafoss Waterfall</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="https://img.freepik.com/premium-photo/sunset-beach-with-coconut-palms-sri-lanka_920758-2713.jpg?w=900" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span> Hawaii</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="https://img.freepik.com/free-photo/beautiful-young-couple-posing-sea-beach-love-tenderness_1296-915.jpg?w=900&t=st=1694772096~exp=1694772696~hmac=fddfa2474300674ae5ca4452067c4a35e7a090b6a6e650e2b9d999ecd9375e87" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Phi Phi Island, Thailand</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner__container">
+      <div class="section__container">
+        <div class="banner__content">
+          <h2>Discount 10-30% Off</h2>
+          <p>
+            Travel the world on a budget with our unbeatable discounted travel
+            deals. Whether you're looking for a last-minute escape or planning
+            ahead, we've got you covered with incredible discounts on flights,
+            hotels, and packages. Don't wait, book now and experience the
+            adventure of a lifetime without breaking the bank.
+          </p>
+          <button>See Tours</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="display__container">
+      <div class="section__container">
+        <h2 class="section__title">Why Choose Us</h2>
+        <p class="section__subtitle">
+          The gladdest moment in human life, is a departure into unknown lands.
+        </p>
+        <div class="display__grid">
+          <div class="display__card grid-1">
+            <img src="https://img.freepik.com/free-photo/hugging-couple-with-backpack-sitting-top-rock-mountain-enjoying-view-coast-river-lake_146671-15593.jpg?w=900&t=st=1694773255~exp=1694773855~hmac=c02427b80b445a42d59156993bbf1b41deb31c60ae7ad9b5c8ddd73b56a674fd" alt="grid" />
+          </div>
+          <div class="display__card">
+            <i class="ri-earth-line"></i>
+            <h4>Passionate Travel</h4>
+            <p>Fuel your passion for adventure and discover new horizons</p>
+          </div>
+          <div class="display__card">
+            <img src="https://img.freepik.com/free-photo/female-young-woman-sitting-edge-mountain-with-her-backpack_23-2148139698.jpg?w=740&t=st=1694773524~exp=1694774124~hmac=f2acabbb815a5685639abaae3ed324b0e521cfcf62dd54ce9c4e7149df4d44be" alt="grid" />
+          </div>
+          <div class="display__card">
+            <img src="https://img.freepik.com/free-photo/young-beautiful-hipster-couple-love-walking-by-river-wild-nature-winter-vacation_285396-2033.jpg?w=900&t=st=1694773436~exp=1694774036~hmac=1f80575e0b63ee8a04c0990e0830b534eef6d75c2287d74ea89773b5162176ae" alt="grid" />
+          </div>
+          <div class="display__card">
+            <i class="ri-road-map-line"></i>
+            <h4>Beautiful Places</h4>
+            <p>Uncover the world's most breathtakingly beautiful places</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="section__container">
+        <h4>Travel.co</h4>
+        <div class="social__icons">
+          <span><i class="ri-facebook-fill"> </i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-linkedin-fill"></i></span>
+        </div>
+        <p>
+          Travel makes one modest. You see what a tiny place you occupy in the
+          world.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
